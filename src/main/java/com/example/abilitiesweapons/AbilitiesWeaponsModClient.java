@@ -1,0 +1,1 @@
+package com.example.abilitiesweapons;import com.example.abilitiesweapons.keybinding.ModKeybindings;import net.fabricmc.api.ClientModInitializer;public class AbilitiesWeaponsModClient implements ClientModInitializer {@Overridepublic void onInitializeClient() {ModKeybindings.register();}}
