@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "elementalweapons",
+  "version": "${version}",
+
+  "name": "Elemental Weapons",
+  "description": "A mod that introduces powerful elemental weapons to Minecraft, each with a unique, click-R activated ability.",
+  "authors": [
+    "Your Name Here"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/elementalweapons/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.elementalweapons.ElementalWeaponsMod"
+    ],
+    "client": [
+      "com.example.elementalweapons.ElementalWeaponsModClient"
+    ],
+    "fabric-datagen": [
+      "com.example.elementalweapons.ElementalWeaponsModDataGenerator"
+    ]
+  },
+  "mixins": [
+    "elementalweapons.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "${minecraft_version}",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
