@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "abilityweapons",
+  "version": "${mod_version}",
+
+  "name": "Ability Weapons",
+  "description": "Adds custom weapons with special abilities to Minecraft!",
+  "authors": [
+    "Your Name Here"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/abilityweapons/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.abilityweapons.AbilityWeapons"
+    ],
+    "client": [
+      "com.example.abilityweapons.AbilityWeaponsClient"
+    ]
+  },
+  "mixins": [
+    "abilityweapons.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.21.5",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

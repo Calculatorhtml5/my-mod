@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    " C ",
+    " K "
+  ],
+  "key": {
+    "S": {
+      "item": "abilityweapons:infused_storm_shard"
+    },
+    "C": {
+      "item": "abilityweapons:weapon_core"
+    },
+    "K": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "abilityweapons:thunderstrike",
+    "count": 1
+  }
+}
