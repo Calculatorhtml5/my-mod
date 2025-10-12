@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "customweapons",
+  "version": "${version}",
+  "name": "Custom Weapons for Minecraft",
+  "description": "Adds elemental weapons to Minecraft, each with a unique special ability activated by pressing the 'R' key.",
+  "authors": [
+    "Your Name"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/"
+  },
+  "license": "MIT",
+  "icon": "assets/customweapons/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.customweapons.CustomWeaponsMod"
+    ],
+    "client": [
+      "com.example.customweapons.CustomWeaponsClientMod"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.21.5",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

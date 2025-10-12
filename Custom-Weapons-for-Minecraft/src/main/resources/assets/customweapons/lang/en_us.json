@@ -1,0 +1,15 @@
+{
+  "item.customweapons.fire_sword": "Firebrand Blade",
+  "item.customweapons.water_sword": "Tideslicer",
+  "item.customweapons.earth_sword": "Stoneguard Claymore",
+  "item.customweapons.air_sword": "Zephyr Edge",
+
+  "itemGroup.customweapons.custom_weapons_group": "Elemental Weapons",
+
+  "key.category.customweapons.custom_weapons": "Custom Weapons",
+  "key.customweapons.activate_ability": "Activate Weapon Ability",
+
+  "item.customweapons.ability_used": "Ability activated!",
+  "item.customweapons.ability_failed": "Ability failed!",
+  "item.customweapons.ability_on_cooldown": "Ability on cooldown! (§e%s§r seconds remaining)"
+}
