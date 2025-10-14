@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    " C ",
+    " I "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:polished_deepslate"
+    },
+    "C": {
+      "item": "superweapons:superweapon_core"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "superweapons:earth_hammer",
+    "count": 1
+  }
+}

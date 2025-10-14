@@ -1,0 +1,9 @@
+{
+  "item.superweapons.superweapon_core": "Superweapon Core",
+  "item.superweapons.fire_sword": "Fire Sword",
+  "item.superweapons.ice_blade": "Ice Blade",
+  "item.superweapons.thunder_axe": "Thunder Axe",
+  "item.superweapons.earth_hammer": "Earth Hammer",
+  "item.superweapons.ability_on_cooldown": "Ability on cooldown! (§c%s§r seconds remaining)",
+  "itemgroup.superweapons.superweapons_group": "Superweapons"
+}
