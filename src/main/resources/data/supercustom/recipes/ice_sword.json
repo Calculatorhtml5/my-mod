@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    "IEI",
+    " S "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:packed_ice"
+    },
+    "E": {
+      "item": "supercustom:elemental_gem"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "supercustom:ice_sword",
+    "count": 1
+  }
+}

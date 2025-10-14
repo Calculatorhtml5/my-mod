@@ -1,0 +1,94 @@
+plugins {
+    id 'fabric-loom' version '1.7-SNAPSHOT'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+archivesBaseName = project.archives_base_name
+
+configurations {
+    // Configure the provided configuration. It is by default extended from implementation with the following. Other configurations may also extend from it.
+    provided {
+        // This exposes the configuration to the IDE. It is not required for compilation and is only used to mark provided dependencies in the IDE.
+        extendsFrom(configurations.implementation)
+    }
+}
+
+repositories {
+    // Add repositories to retrieve artifacts from in here.
+    // These repositories will be used to retrieve artifacts from, such as dependencies, loom and fabric itself.
+    // Maven Central is included by default.
+    // You may also add custom repositories like this:
+    // maven { url "https://maven.example.com/" }
+}
+
+dependencies {
+    // To change the versions of dependencies, see the gradle.properties file.
+    // Fabric Loom will automatically add the official Yarn mappings to the classpath if you include 'net.fabricmc:fabric-loader:' as a dependency.
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.layered() {
+        it.mappings "net.fabricmc:yarn:${project.minecraft_version}+${project.yarn_mappings}:v2"
+    }
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+    // Fabric API. This is technically optional, but you probably want it anyway.
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 21
+}
+
+java {
+    // Ensure the javadoc jar is compiled using Java 8, as that is what vanilla expects
+    withJavadocJar()
+}
+
+jar {
+    from("LICENSE") {
+        rename {
+            "${it}_${project.archivesBaseName}"
+        }
+    }
+}
+
+// Configure the maven publication
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact(remapJar) {
+                classifier "dev"
+            }
+            artifact(sourcesJar) {
+                classifier "dev-sources"
+            }
+        }
+    }
+
+    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+    repositories {
+        // Add repositories to publish to here
+        // maven { url "https://maven.example.com/" }
+    }
+}

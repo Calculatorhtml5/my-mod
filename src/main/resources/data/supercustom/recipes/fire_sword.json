@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " F ",
+    "FEF",
+    " S "
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:blaze_rod"
+    },
+    "E": {
+      "item": "supercustom:elemental_gem"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "supercustom:fire_sword",
+    "count": 1
+  }
+}
